@@ -63,11 +63,13 @@ void display() {
       glutWireSphere(0.4, 20, 16);
     glPopMatrix();
   
-  //lua
+    //lua
     glColor3f(1, 1, 1);
 
     glRotatef(angLua, 0, 0, 1);
     glTranslatef(1, 0.3, 0.3);
+
+    
     glRotatef(rotLua, 0, 1,0);
 
     glutWireSphere(0.12, 20, 16);
@@ -127,7 +129,7 @@ void reshape(int w, int h) {
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
   gluPerspective(60.0, w / (h * 1.0), 1.0, 20.0);
-  gluLookAt(0.0, 0.0, 14.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
+  gluLookAt(0.0, 0.0, 18.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
