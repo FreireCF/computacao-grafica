@@ -95,7 +95,7 @@ void display(void) {
 void change_cam_view() {
   switch (cam_view) {
     case 0:
-      gluLookAt(0, 100, 0, 0, 0, 0, 1, 0, 0);
+      gluLookAt(0, 100, 0, 0, 0, 0, 1, 0, 0); 
       break;
     case 1:
       gluLookAt(-100, 50, 0, 0, 0, 0, 1, 0, 0);

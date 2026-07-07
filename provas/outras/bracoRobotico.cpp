@@ -21,33 +21,33 @@ void display(void) {
   glPushMatrix();
   glColor3f(0.4f, 0.4f, 0.4f);
     glRotatef(baseAngle, 0, 1, 0);
-    glScalef(6.0f, 1.0f, 6.0f);  
-    glutSolidCube(1.0f);
-  glPopMatrix();
+    glPushMatrix();
+      glScalef(6.0f, 1.0f, 6.0f);  
+      glutSolidCube(1.0f);
+    glPopMatrix();
 
   //braço
   glPushMatrix();
-    glRotatef(baseAngle, 0, 1, 0);
     glRotatef(shoulderAngle, 0, 0, 1);
     glTranslatef(0, 4, 0);
-     glColor3f(0.8, 0.3, 0.1);
+    glColor3f(0.8, 0.3, 0.1);
+  glPushMatrix();
     glScalef(1.0, 8.0, 1.0);
     glutSolidCube(1.0f);
+  glPopMatrix();
     
    //ante braço
   glPushMatrix();
     glColor3f(0.9, 0.5, 0.1);
     //glRotatef(baseAngle, 0, 1, 0);
     //glRotatef(shoulderAngle, 0, 0, 1);
-    glTranslatef(0, 4, 0);
+    glTranslatef(0, 3, 0);
     glRotatef(elbowAngle, 0, 0, 1);
     glTranslatef(0, 3.5, 0);
-    glScalef(0.8, 7.0, 0.8);
+    glScalef(0.8, 5.0, 0.8);
     glutSolidCube(1.0f);
   glPopMatrix();
-
-   
-
+  glPopMatrix();
   glPopMatrix();
 
   glutSwapBuffers();
