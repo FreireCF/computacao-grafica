@@ -46,7 +46,7 @@ void display() {
   glPushMatrix();
     glColor3f(1,1,0);
     //efeito de rotação diagonal no sil
-    glRotatef(rotTerra, 1, 0, 0); 
+    //glRotatef(rotTerra, 1, 0, 0); 
     glRotatef(rotTerra, 1, 1, 0);
     glutWireSphere(1.0, 20, 16);
   glPopMatrix();
@@ -57,7 +57,7 @@ void display() {
 
     glRotatef(angTerra, 0, 0, 1); //translação
     glTranslatef(4, 0, 0);
-
+    
     glPushMatrix();
       glRotatef(rotTerra, 0, 1, 0); //rotação
       glutWireSphere(0.4, 20, 16);

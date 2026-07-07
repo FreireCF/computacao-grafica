@@ -65,43 +65,44 @@ void display(void) {
 
   // Braco 2
   glPushMatrix();
-  glTranslatef(20, 10, 0);
-  glRotatef(pos_corpo*2, 0, 0, 1);
-  glColor3f(0.0f, 1.0f, 1.0f);
-  glutWireCube(10);
-  glPushMatrix();
-  glColor3f(0.0f, 0.0f, 0.0f);
-  glTranslatef(0, -10, 0);
-  glutWireCube(10);
-  glPopMatrix();
+    glTranslatef(20, 10, 0);
+    glRotatef(pos_corpo*2, 0, 0, 1);
+    glColor3f(0.0f, 1.0f, 1.0f);
+    glutWireCube(10);
+    glPushMatrix();
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glTranslatef(0, -10, 0);
+    glutWireCube(10);
+    glPopMatrix();
   glPopMatrix();
 
   // Perna 1
   glPushMatrix();
-  glTranslatef(10, -20, 0);
-  glColor3f(0.0f, 0.0f, 0.0f);
-  glutWireCube(10);
-  glPushMatrix();
-  glColor3f(0.0f, 0.0f, 0.0f);
-  glTranslatef(0, -10, 0);
-  glutWireCube(10);
-  glPopMatrix();
+    glTranslatef(10, -20, 0);
+    glRotatef(pos_corpo*5, 0, 0, 1);
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glutWireCube(10);
+    glPushMatrix();
+    glColor3f(0.0f, 0.0f, 0.0f);
+    glTranslatef(0, -10, 0);
+    glutWireCube(10);
+    glPopMatrix();
   glPopMatrix();
 
   // Perna 2
   glPushMatrix();
-  glTranslatef(-10, -20, 0);
-  glBegin(GL_POINTS);
-  glVertex3f(0, 0, 0);
-  glEnd();
-  glColor3f(0.0f, 0.0f, 0.0f);
-  glutWireCube(10);
-  glPushMatrix();
-  glTranslatef(0, -10, 0);
-  glutWireCube(10);
+    glTranslatef(-10, -20, 0);
+    glRotatef(-pos_corpo*5, 0, 0, 1);
+    glBegin(GL_POINTS);
+    glVertex3f(0, 0, 0);
+    glEnd();
+    glColor4f(0.0f, 0.0f, 0.0f, 0.4f);
+    glutSolidCube(10);
+    glPushMatrix();
+      glTranslatef(0, -10, 0);
+      glutWireCube(10);
+    glPopMatrix();
   glPopMatrix();
-  glPopMatrix();
-
   glPopMatrix();
 
   glutSwapBuffers();
@@ -112,7 +113,7 @@ void init() {
   glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	glEnable(GL_DEPTH_TEST);
-	glEnable(GL_CULL_FACE);
+	//glEnable(GL_CULL_FACE);
   angle = 45;
 }
 
@@ -200,6 +201,16 @@ void keyboard(unsigned char key, int x, int y) {
     
     case 'l':
       poli--;
+      break;
+    
+    case 'r':
+      rotX = 0;
+      rotY = 0;
+      rotZ = 0;
+      poli = 0;
+      rotAnte = 0;
+      rotArm = 0;
+      pos_corpo = 0;
       break;
 
     case 32:
