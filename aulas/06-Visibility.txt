@@ -1,0 +1,60 @@
+Realismo visual e iluminação
+-> Criação de imagens sintéticas realistas 
+
+*Realismo visual 
+  -> Técnicas de tratamento computacional aplicadas a objetos
+  sintéticos para gerar imagens realistas 
+
+-Etapas estática e dinâmica
+
+*REALISMO VISUAL
+-> Nivel de ralismo adequado a cada projeto/necessidade 
+
+*Maior realismo = maior custo computacional e tempo de processamento
+
+*Realismo em fases ou passadas
+  -> Gera cenas realísticas passo a passo (ex: sombras -> neblina -> reflexo ...)
+
+*Imagens não fotorealistas
+- Non-photorealistic (NPR) ou stylistic renderin
+  -> Simulação de pinturas reais 
+  -> Efeitos criativos
+  -> Estilo de expressão de um artista
+
+* Geração de Imagens
+-> Conjunto de métodos e técnicas para transformar dados em   
+   imagens através de uma dispositivo gráfico
+
+* Rasterização: 
+  Dados -> Vértices -> Trinângulos ->
+  -> Fragmentos -> Pixels -> Imagem
+
+  Mapeia um desenho em matriz para ser armazenada na memória
+
+
+* Rasterização de Retas 
+- Nem sempre será possível rasterizar perfeitamente uma reta
+  -> Representação por pixels (aproximação)
+
+-> Pode ter aliasiang
+-> Menor resolução = mais aliasiang
+
+-Algoritmos anti-aliasing
+  -> Visam enganar o olho humano 
+  -> Borram as bordas de uma imagem 
+  -> Usam cor intermediária
+  -> Suavizam o contraste  
+
+  --Algoritmo de Bresenham e DDA (Digital Differential Analyser)
+
+  Traçado de linhas
+  -> Localização de dois pixels 
+  Algoritmo:
+  
+  se reta passa da metade para cima 
+    acende o pixel 
+  se não
+    não acende o pixel
+  
+  Bresenham usa número inteiros
+  DDA faz cálculos com pontos flutuantes 
