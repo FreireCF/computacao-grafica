@@ -45,7 +45,7 @@ void init (void){
  	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 	// Habilita o modelo de colorização de Gouraud
-	glShadeModel(GL_SMOOTH);//GL_FLAT
+	glShadeModel(GL_SMOOTH);//GL_FLAT = constante 
 
 	// Define o grau de especularidade do material
 	glMaterialfv(GL_FRONT,GL_SPECULAR, especularidade);
