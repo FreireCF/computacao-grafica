@@ -199,7 +199,7 @@ void renderModel(const model& model) {
  glEnd();
 }
 
-void displayPersp(void) { //MUDAR AQ
+void displayPersp(void) { 
   glMatrixMode(GL_MODELVIEW);
 
   glLoadIdentity();
@@ -242,8 +242,7 @@ void displayPersp(void) { //MUDAR AQ
   glutSwapBuffers();
 }
 
-void init() { //MUDAR AQ
-	// GLfloat posicaoLuz[4]={0.0, -50.0, 50.0, 1.0};
+void init() { 
   GLfloat posicaoLuz[4] = {0.0, 3.0, 0.0, 1.0};
   GLfloat luzAmbiente[4] = {0.1, 0.1, 0.1, 0.0};
   GLfloat luzDifusa[4] = {0.75, 0.75, 0.75, 1.0};
